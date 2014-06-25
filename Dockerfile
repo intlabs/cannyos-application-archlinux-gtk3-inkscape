@@ -34,7 +34,8 @@ WORKDIR /
 #****************************************************
 
 #Install inkscape
-RUN pacman -Sy --noconfirm && \
+RUN pacman -Syyu --noconfirm && \
+	pacman -Sy --noconfirm && \
 	curl -O https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz && \
 	tar zxvf package-query.tar.gz && \
 	cd package-query && \
